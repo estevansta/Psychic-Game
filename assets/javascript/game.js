@@ -17,7 +17,7 @@ document.onkeyup = function(event) {
 
     var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 
-    // if statements //
+    // if statements **need to review more**//
 
     if (options.indexOf(userGuess) > -1) {
 
