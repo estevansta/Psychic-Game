@@ -7,18 +7,28 @@ var losses = 0;
 var numGuesses = 9;
 var guessChoices = [];
 
-// onkey evenets //
+// onkey evenet //
 
 document.onkeyup = function(event) {
 
-    var userGuesses = event.key;
+    var userGuess = event.key;
 
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
     var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
 
+    // if statements //
+
+    if (options.indexOf(userGuess) > -1) {
+
+        if (userGuess === computerGuess) {
+            wins++;
+            numGuesses = 9;
+            guessChoices = [];
+        }
 
 
+    }
 
 
 }
@@ -26,4 +36,4 @@ document.onkeyup = function(event) {
 
 //console log test//
 
-console.log(wins, losses, numGuesses);
+// console.log(wins, losses, numGuesses);
