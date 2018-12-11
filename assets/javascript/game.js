@@ -27,12 +27,27 @@ document.onkeyup = function(event) {
             guessChoices = [];
         }
 
+        if (userGuess != computerGuess) {
+            numGuesses --;
+            guessChoices.push(userGuess);
+        }
+
+        if (numGuesses === 0) {
+
+            numGuesses = 9;
+            losses ++;
+            guessChoices = [];
+
+            
+        }
+
+
 
     }
 
 
 }
-
+console.log(computerChoices, wins, losses);
 
 //console log test//
 
